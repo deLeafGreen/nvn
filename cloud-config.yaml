@@ -1,0 +1,89 @@
+#cloud-config
+ssh_authorized_keys:
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCs6qAlLrBggq5ZxC1FcFNg6VzTsSH+xeNKnxPXEpPCY48HORjpyYKxqmiuWfDEYeNLY0s7ijbpheCV/6KtI9Zc2i5lk/dKWAd2q9M9G5VwiXYwrznRq1m8pZ2UCRzPsdwHGyMTdHVxUuAucCqRfzvIOaJPWBUwc5ZYhV9gDFLJpfPBWcqiWrGV0R+CRkpmovIcH/uOojCiKxrOf614qilJGS/19O5xs1wwdqCU5SUsounJzoY903g+W/B1X2l2v3/dMOn072iz+BV1BMSmTfceeTghh4WYfCz9vbh8Nz1ZSnm845W3BKNkyw8AqQdLBx2ojQoiUjOf+zCPVGT3tPwt
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC4L26K6m3N2X5pvZT+gfMc4asImT57PGqKtYms2z3Mxl+ZiH8jXmK8p/EVjs/f9v1hBJBSU3k9InL4L5GXgIW0M1rSbHpi+H51e67VPC5QlzAEeznyr8owI/EXHR2D5rGxjDpYkjidFHxSytc31lM3bZWxExG3qpkp1CmIEvtjOJHzpzMnltXAho0sDYRjiDy3iDZitH7XhMIVLQx0KJ/cD6VCDq2EmnALKUM44mVgw93n3yr99s4RKqxLli0gOMbfa1DE9i3Btj2IiGg100TYE+YYS9nV4ijmQ/KopO2BKnU7DjjxW2kwChj67X00RaCYLNjiw0n07E39SIInAPLT
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDUnEBT33JKvqbBlkoV8GSzRJuZz5Ys7PNigHhiPhSUbrEpTXceXP3/rkHBAsehFriukmXjN9fOxbWloJSsD10MUjRMWPqkaKgkxI0kzoAZUJV8ex+zsnJ+Gvf7l9q5FdpUl2ie6ZvQHwascIuzkuXrcxLxNMKtfI9I88iXZM6CX42bgdwsOXvKHGzdfgvIJwr7SsyZxMk5tUF6rYZJK/xmYUdYfY0Atg2QF96pR4INPwRRuoBoe3+A3BJFWPsLRDb/3XGWg1FYzI6zfCOwwybbemjskH/PIvGrnP+Ld6VxZkPCSHQNKeaRYlzk07VJM6gF8EqxtRMhliJeVnu/x86f
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCuPe/MEHDUgou91HSWIo7obzUNVM+ZvDxYgMsHXCk+2Vv8XhUWUY73OGlYocrzBOTu+gvUjz45LQCM+LQdo+8hYXUv/NCU6kOZdVBUXzl0yxnGzBDqZ2OAvGuyIjrQ7or+3oAo93nn+4pi3IFwzyrqnz7u4K/qSP4dO9kk1fQLoqS93TAf8BqAfWcjlR6YmHCjIBmPqY15DEXWxw4DenGbGStuFSEDPuOlhDBOZTwKd7+BFdenjm0H4w973pJR5CgXtV14K2apVO1Un5O2N33s1eKYJoLPkDjwXqwq71s+/6zwU7BFtmGhrkMG8FYowNo2AFQzoBZIzWkpQviEF+v/
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCvf7MnzgeW4tPwQ+oplZhlW1yRloxulxo+LRh7KEm+9FXQT0YFlJ/XhLEUeW/qDVj+3pvOrypAJDA/WOs7sDKEIPotFt2hFpj+A7WchoESIWF5y7yQNV8dNh/UDxmTrUgQOyoa7nwBY0/zqunjgXFJoiFKnXiQHt6daZ70ZyUrqo/VI3EapfsiBOHq/nZapjSsb6qxi9pmOZPCn/NhtsKx/Lloqky0FOhL/HsWFkQb3eMFWbQwz7vLyCnhcWUr3GP7Z90bug/DqyJWRWyB+LobORgES/uCpntVL3WT/eBdGdL5UVyYIiCjHw2/qRvhRNrXJRNLpWC7LCfKKnsHZEvZ
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDB6uDRbsEM8ZIe5HNS5OA0xANc8o4ArH26oFtlTzUxSVdoIj7A9zgRAXSnqhibvIrsCHzVCgyymLGv5Um9VqCeYLbm0UOG55gfhEwhL+DkYslraA36HeR2z59QoaGJlFm2UFpVsWFtXEitzzjMUIyvIaESfQif6aIHh3xibi8wRXUuWPuRLP1AfyR4PhlrIzJ/l+/gd5zdMVO14D7ndhcpnDh6voMpIcQA4agbVQjb6yYF5BnNmvkKNQ+7LZLhMdPZPedl9i0YnH9iUXizrnIsKjHJigk8aSuMP8BZDrtUhGoTfx2Tzgzu+4Ib8eDG339wUtVzGEiMAI/uP5a2OiSh
+hostname: pew
+coreos:
+  etcd:
+    # generate a new token for each unique cluster from https://discovery.etcd.io/new
+    discovery: https://discovery.etcd.io/b6f60ae29da13de7de83d88f323b7c30
+    # multi-region and multi-cloud deployments need to use $public_ipv4
+    addr: 10.0.0.101:4001
+    peer-addr: 10.0.0.101:7001
+    
+  units:
+    - name: etcd.service
+      command: start
+    - name: fleet.service
+      command: start
+    - name: enp2s0.network
+      runtime: true
+      content: |
+        [Match]
+        Name=enp2s0
+        [Network]
+        Address=130.133.110.227/28
+        Gateway=130.133.110.225
+        Netmask=255.255.255.240
+        Broadcast=130.133.110.239
+    - name: enp1s1.network
+      runtime: true
+      content: |
+        [Match]
+        Name=enp1s1
+        [Network]
+        Address=130.133.110.245/24
+        Gateway=130.133.110.241
+        Netmask=255.255.255.0
+        Broadcast=130.133.110.247
+write_files:
+  - path: /etc/resolv.conf
+    permissions: 0644
+    owner: root
+    content: |
+      nameserver 130.133.110.70
+  - path: /etc/motd
+    permissions: 0644
+    owner: root
+    content: |
+      This is the day of the messages!
+  - path: /home/core/Repo/MT/Dockerfile
+    content: |
+      # minetest_pew
+      #
+      # VERSION    0.0.2
+      
+      FROM    ubuntu:14.04.1
+      MAINTAINER Spline <joz@spline.de>
+      
+      RUN apt-get update && apt-get dist-upgrade -y \
+      && apt-get install -y build-essential libirrlicht-dev cmake libbz2-dev libpng12-dev libjpeg8-dev libxxf86vm-dev libgl1-mesa-dev libsqlite3-dev libogg-dev libvorbis-dev libopenal-dev libcurl4-gnutls-dev libfreetype6-dev libleveldb-dev libhiredis-dev wget zip
+      
+      RUN     wget https://github.com/minetest/minetest/tarball/master -O master.tar.gz && \
+          tar xf master.tar.gz && \
+          rm master.tar.gz && \
+          mv minetest-* minetest && \
+          cd minetest/games/ && \
+          wget https://github.com/minetest/minetest_game/tarball/master -O minetest_game.tar.gz && \
+          tar xf minetest_game.tar.gz && \
+          wget https://gitorious.org/calinou/carbone/archive/master.zip -O carbone.zip && \
+          unzip carbone.zip && \
+          mv calinou* carbone
+      
+      RUN touch /minetest/minetest.conf \
+      && echo "wanted_fps = 15" >> /minetest/minetest.conf  \
+      && echo "default_game = carbone" >> /minetest/minetest.conf \
+      && echo "time_speed = 72000" >> /minetest/minetest.conf \
+      && echo "server_map_save_interval = 500.0" >> /minetest/minetest.conf \
+      && echo "max_simultaneous_block_sends_server_total = 250" >> /minetest/minetest.conf \
+      && echo "max_simultaneous_block_sends_per_client = 6" >> /minetest/minetest.conf \
+      && echo "max_clearobjects_extra_loaded_blocks = 30000" >> /minetest/minetest.conf \
+      && cd /minetest/$MINEDIR/ && cmake . -DRUN_IN_PLACE=1 -DBUILD_CLIENT=0 -DENABLE_LEVELDB=1 && make -j3
+      
+      CMD cd /minetest/ && bin/minetestserver --port 9001
+      
+      EXPOSE 9001
